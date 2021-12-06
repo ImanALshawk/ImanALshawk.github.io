@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="vendors/css/fullpage.css" />
+  <link rel="stylesheet" type="text/css" href="resources/css/custom.css" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+  />
+  <title>CS171 Final Project</title>
+</head>
+<body>
+<ul id="menu">
+  <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+  <li data-menuanchor="features"><a href="#features">By month & year</a></li>
+  <li data-menuanchor="works"><a href="#works">By demographics</a></li>
+  <li data-menuanchor="facts"><a href="#facts">Facts</a></li>
+  <li data-menuanchor="cities"><a href="#cities">By age & race</a></li>
+  <li data-menuanchor="plans"><a href="#plans">By County</a></li>
+  <li data-menuanchor="names"><a href="#names">Names</a></li>
+  <li data-menuanchor="about"><a href="#about">About</a></li>
+</ul>
+<div id="fullpage">
+  <div class="section" id="section0">
+      <div class="hero-text-box">
+        <h1>Police Violence.<br />Data Visualization.</h1>
+      </div>
+  </div>
+  <div class="section" id="section1">
+    <h2>Every day the police kills 3 people on average</h2>
+    <div class="row px-5">
+      <div class="col paragraph">
+        <p class="long-copy">
+          For the past 9 years, the police killed three people on average every day.
+          These figures have been steady throughout the past decade and are not showing any sign of decline.
+          Particularly triking is May 2020, which, amid the protests against police brutality, had the highest number of police shootings in the past 9 years.
+        </p>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div id="vis1PlaceHolder"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section px-3" id="section2">
+    <div class="row px-5">
+      <div class="slide" id="slide1">
+        <h2>The Breakdown of Fatal Police Shootings</h2>
+        <div class="row px-5">
+          <div class="row w-100">
+            <div class="col" id="vis2PlaceHolder">
+            </div>
+          </div>
+          <div class="row">
+            We decided to continue exploring our dataset to see the breakdown of all fatal police shootings that took place between
+            2013 and 2017. From this, we constructed a diagram that splits this data up by gender of the victim, and then further
+            by race and armed status. Interestingly, we quickly noticed that there was not a huge difference between the number of
+            black males that were fatally shot and the number of white males, even though white males make up a much larger proportion
+            of America's population. The difference was even much smaller for the number of black male victims who ended up
+            being unarmed/did not have an actual weapon and the number of white male victims with the same criteria.
+          </div>
+        </div>
+      </div>
+      <div class="slide" id="slide2">
+        <h2>Understanding the Sankey Diagram</h2>
+        <div class="row px-5">
+          <div class="col-3">
+          </div>
+          <div class="col-3">
+            <p class="long-copy">
+              Based on our data, the percentage of total fatal police shooting victims that are white males is only</p>
+            <p class="big-stats">1.1x</p>
+            <p class="long-copy">
+              the percentage of the total US population that is white males.*
+            </p>
+          </div>
+          <div class="col-3" style="align: justify;">
+            <p class="long-copy">
+              This is in contrast to the fact that the percentage of fatal police shooting
+              victims that are black males is</p>
+            <p class="big-stats">4x</p>
+            <p class="long-copy">
+              the percentage of the total US population that is black males.*
+            </p>
+          </div>
+          <div class="row">
+            Based on our observations from the sankey diagram, we continued to dig further to fully understand the stats behind
+            our initial thoughts. Using data from the U.S. Census Bureau and the World Bank, we compared the percentage of White
+            male victims of fatal police shootings to their overall composition makeup in the United States population and repeated
+            this process for Black male victims. As expected, we found a roughly 1:1 ratio for White male victims, meaning that the
+            proportion of fatal police shooting victims that is White male aligns with the proportion of the United States population
+            that is White male. However, this statistic did not hold true for Black males: whereas Black males only make up 6%
+            of the United States population, they made up around 24% of all fatal police shooting victims, which is 4x greater.
+          </div>
+        </div>
+      </div>
+      <div class="slide" id="slide3">
+        <h2>Understanding the Sankey Diagram Cont.</h2>
+        <div class="row px-5">
+          <div class="col-3">
+          </div>
+          <div class="col-3">
+            <p class="big-stats">12.5%</p>
+            <p class="long-copy">
+              of White male victims of fatal police shootings ended up being unarmed.
+            </p>
+          </div>
+          <div class="col-3">
+            <p class="big-stats">16.1%</p>
+            <p class="long-copy">
+              of Black male victims of fatal police shootings ended up being unarmed.
+            </p>
+          </div>
+          <div class="row">
+            Furthermore, we looked into the close numbers between the number of White male victims who ended up
+            being unarmed/did not have an actual weapon and the number of Black male victims with the same criteria. We
+            found that only 12.5% of all White male victims of fatal police shootings were unarmed, whereas 16.1%
+            of Black male victims ended up being unarmed. Unarmed victims don't usually pose a threat, and yet a larger
+            proportion of Black males were killed while being unarmed. This causes us to believe that there may be some
+            sort of racial bias held by officers when dealing with individuals.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section3">
+    <br>
+    <h2>Black teenagers are disproportionately targeted</h2>
+    <div class="row px-5">
+      <div class="col paragraph">
+        <p class="long-copy" >
+          Young black Americans are disproportionally killed by police.
+          If you set the age range between 15 and 20 years old, you can see that
+          the number of black teenagers killed by police is almost twice that white teenagers.
+          Taking into account that 60% of the American population is white and 15% is black,
+          these figures show that black teenagers face a significantly higher risk of being targeted by the police.
+        </p>
+      </div>
+      <div class="col" >
+        <p style="display: inline">Select age range: </p>
+        <center>
+          <div id="slider-range" style="display: flex; flex-wrap: wrap; align-content: center;"></div>
+        </center>
+        <div id="vis3PlaceHolder">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section4">
+    <br>
+    <h2>Stacked Bar Graph</h2>
+    <p class="align-self-center">
+      <select id='categorySelector' class="custom-select align-self-center" style="width: 50%" onchange="categoryChange()">
+        <option value="2018" selected>2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+      </select>
+    </p>
+    <div class="row px-5">
+      <div class="col">
+        <p class="long-copy">
+          TODO
+        </p>
+      </div>
+      <div class="col">
+        <div id="stackedTooltip">
+
+        </div>
+        <div id="stackedbar">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section" id="section5">
+    <h2>Number of Fatal Police Shootings per State</h2>
+    <div class="row px-5">
+      <div class="row w-100">
+        <div id="map"></div>
+      </div>
+      <div class="row w-100">
+        We note that some states have significantly higher number of shootings in comparison to other states.
+        For instance, we see that Calinfornia has the highest number of fatal police shootings in the US,
+        with a total number of 1477 shootings. We then decided to look at locations where George Floyd / Black
+        Lives Matter protests, actions, or vigils have occurred since May 25, 2020. We represented these events using
+        dots, where the size of the radius corresponds to the number of events that took place. We observe
+
+      </div>
+    </div>
+  </div>
+  <div class="section fp-auto-height-responsive" id="section6">
+    <button id = "rememberBtn" onclick = "buttonclicked()" class="btn btn-light" style="font-size: 30px; border-radius: 12px; background-color: #fbf8f3; border: 2px solid #555">REMEMBER THEIR NAMES</button>
+    <br>
+    <br>
+    <div class="row px-5">
+      <h3 id="typewriter"></h3>
+    </div>
+  </div>
+  <div class="section">
+    <div class="row px-5">
+      <h1>
+        CS171 Final Project by Sara Komaiha, Felicia Roman, and Iman Alshawk
+      </h1>
+    </div>
+  </div>
+</div>
+
+<!--bootstrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-array.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v2.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://unpkg.com/d3-simple-slider"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="vendors/js/fullpage.js"></script>
+<script src="vendors/js/sankey.js"></script>
+<script src="resources/js/visualization2.js"></script>
+<script src="resources/js/heatmap.js"></script>
+<script src="resources/js/barchart.js"></script>
+<script src="resources/js/map.js"></script>
+<script src="resources/js/visualization5.js"></script>
+<script src="resources/js/stackedbar.js"></script>
+<script src="resources/js/main.js"></script>
+<script type="text/javascript">
+    new fullpage('#fullpage', {
+    sectionsColor: ['#fbf8f3', '#fbf8f3', '#fbf8f3','#fbf8f3', '#fbf8f3', '#fbf8f3', '#fbf8f3', '#fbf8f3'],
+    anchors: ['home', 'features', 'works', 'facts', 'cities', 'plans', 'names', 'about'],
+    navigation:true,
+    navigationTooltips: ['Home', 'Month & Year', 'Demographics', 'Facts', 'Age & Race', 'Map', 'Name', 'About'],
+    showActiveTooltip: true,
+    menu: '#menu'
+  });
+</script>
+</body>
+</html>
