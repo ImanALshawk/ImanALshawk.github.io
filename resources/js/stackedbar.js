@@ -86,6 +86,15 @@ class StackedBar {
 
         vis.barGraph = vis.svg.append("g")
 
+        vis.svg.append("text")
+            .attr("class", "y label")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0- vis.margin.left)
+            .attr("x",0 - (vis.height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Arrest Rate");
+
         vis.wrangleData()
     }
 

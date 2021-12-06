@@ -14,18 +14,18 @@
 <body>
 <ul id="menu">
   <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
-  <li data-menuanchor="features"><a href="#features">By month & year</a></li>
-  <li data-menuanchor="works"><a href="#works">By demographics</a></li>
-  <li data-menuanchor="facts"><a href="#facts">Facts</a></li>
-  <li data-menuanchor="cities"><a href="#cities">By age & race</a></li>
-  <li data-menuanchor="plans"><a href="#plans">By County</a></li>
-  <li data-menuanchor="names"><a href="#names">Names</a></li>
-  <li data-menuanchor="about"><a href="#about">About</a></li>
+  <li data-menuanchor="features"><a href="#features">Vis 1</a></li>
+  <li data-menuanchor="works"><a href="#works">Vis 2</a></li>
+  <li data-menuanchor="facts"><a href="#facts">Vis 3</a></li>
+  <li data-menuanchor="cities"><a href="#cities">Vis 4</a></li>
+  <li data-menuanchor="plans"><a href="#plans">Vis 5</a></li>
+  <li data-menuanchor="names"><a href="#names">Vis 6</a></li>
+  <li data-menuanchor="about"><a href="#about">Takeaway</a></li>
 </ul>
 <div id="fullpage">
   <div class="section" id="section0">
       <div class="hero-text-box">
-        <h1>Police Violence.<br />Data Visualization.</h1>
+        <h1>CS171 Final Project:<br />Police Violence.</h1>
       </div>
   </div>
   <div class="section" id="section1">
@@ -35,7 +35,7 @@
         <p class="long-copy">
           For the past 9 years, the police killed three people on average every day.
           These figures have been steady throughout the past decade and are not showing any sign of decline.
-          Particularly triking is May 2020, which, amid the protests against police brutality, had the highest number of police shootings in the past 9 years.
+          Particularly striking is May 2020, which, amid the protests against police brutality, had the highest number of police shootings in the past 9 years.
         </p>
       </div>
       <div class="col">
@@ -59,9 +59,9 @@
             We decided to continue exploring our dataset to see the breakdown of all fatal police shootings that took place between
             2013 and 2017. From this, we constructed a diagram that splits this data up by gender of the victim, and then further
             by race and armed status. Interestingly, we quickly noticed that there was not a huge difference between the number of
-            black males that were fatally shot and the number of white males, even though white males make up a much larger proportion
-            of America's population. The difference was even much smaller for the number of black male victims who ended up
-            being unarmed/did not have an actual weapon and the number of white male victims with the same criteria.
+            Black males that were fatally shot and the number of White males, even though white males make up a much larger proportion
+            of America's population. The difference was even much smaller for the number of Black male victims who ended up
+            being unarmed/did not have an actual weapon and the number of White male victims with the same criteria.
           </div>
         </div>
       </div>
@@ -72,19 +72,19 @@
           </div>
           <div class="col-3">
             <p class="long-copy">
-              Based on our data, the percentage of total fatal police shooting victims that are white males is only</p>
+              Based on our data, the percentage of total fatal police shooting victims that are White males is only</p>
             <p class="big-stats">1.1x</p>
             <p class="long-copy">
-              the percentage of the total US population that is white males.*
+              the percentage of the total US population that is White males.*
             </p>
           </div>
           <div class="col-3" style="align: justify;">
             <p class="long-copy">
               This is in contrast to the fact that the percentage of fatal police shooting
-              victims that are black males is</p>
+              victims that are Black males is</p>
             <p class="big-stats">4x</p>
             <p class="long-copy">
-              the percentage of the total US population that is black males.*
+              the percentage of the total US population that is Black males.*
             </p>
           </div>
           <div class="row">
@@ -106,13 +106,13 @@
           <div class="col-3">
             <p class="big-stats">12.5%</p>
             <p class="long-copy">
-              of White male victims of fatal police shootings ended up being unarmed.
+              of White male victims of fatal police shootings ended up being unarmed
             </p>
           </div>
           <div class="col-3">
             <p class="big-stats">16.1%</p>
             <p class="long-copy">
-              of Black male victims of fatal police shootings ended up being unarmed.
+              of Black male victims of fatal police shootings ended up being unarmed
             </p>
           </div>
           <div class="row">
@@ -134,11 +134,11 @@
     <div class="row px-5">
       <div class="col paragraph">
         <p class="long-copy" >
-          Young black Americans are disproportionally killed by police.
-          If you set the age range between 15 and 20 years old, you can see that
-          the number of black teenagers killed by police is almost twice that white teenagers.
-          Taking into account that 60% of the American population is white and 15% is black,
-          these figures show that black teenagers face a significantly higher risk of being targeted by the police.
+          Young Black Americans are disproportionally killed by police.
+          If we set the age range between 13 and 19 years old, we can see that
+          the number of Black teenagers killed by police is almost twice that of White teenagers.
+          Taking into account that 60% of the American population is White and 15% is Black,
+          these figures show that Black teenagers face a significantly higher risk of being targeted by the police.
         </p>
       </div>
       <div class="col" >
@@ -154,7 +154,7 @@
 
   <div class="section" id="section4">
     <br>
-    <h2>Stacked Bar Graph</h2>
+    <h2>BLACK JUVENILES HAVE HIGHER ARREST RATES THAN WHITE JUVENILES</h2>
     <p class="align-self-center">
       <select id='categorySelector' class="custom-select align-self-center" style="width: 50%" onchange="categoryChange()">
         <option value="2018" selected>2018</option>
@@ -167,8 +167,13 @@
     </p>
     <div class="row px-5">
       <div class="col">
-        <p class="long-copy">
-          TODO
+        <p class="long-copy" class="paragraph">
+          We then decided to look at the number of juvenile arrests (arrests of individuals of ages 10-17 years old) that took
+          place in the years of 2013 through 2018. From glancing at the stacked bar chart, we can clearly see that the arrest rate
+          (which is calculated by dividing the number of reported arrests by the respective population and then multiplying by
+          100,000) is significantly higher for Black individuals than White individuals. We observe this same pattern in every single
+          one of the years from 2013 through 2018. These results clearly suggest that Black juveniles are targeted more
+          often than their White counterparts, implying that racial bias may play a role in a police officer’s decision to arrest an individual.
         </p>
       </div>
       <div class="col">
@@ -184,23 +189,24 @@
 
 
   <div class="section" id="section5">
-    <h2>Number of Fatal Police Shootings per State</h2>
+    <h2>Number of Fatal Police Shootings and Protests per State</h2>
     <div class="row px-5">
       <div class="row w-100">
         <div id="map"></div>
       </div>
       <div class="row w-100">
-        We note that some states have significantly higher number of shootings in comparison to other states.
-        For instance, we see that Calinfornia has the highest number of fatal police shootings in the US,
+        We note that some states have significantly higher number of fatal police shootings in comparison to other states.
+        For instance, we see that California has the highest number of fatal police shootings in the US,
         with a total number of 1477 shootings. We then decided to look at locations where George Floyd / Black
         Lives Matter protests, actions, or vigils have occurred since May 25, 2020. We represented these events using
-        dots, where the size of the radius corresponds to the number of events that took place. We observe
-
+        dots, where the size of the radius corresponds to the number of events that took place. We observed that there
+        were several events that took place even in states with low numbers of shootings, indicating that people all over
+        began to recognize the severity of this issue and protested for justice.
       </div>
     </div>
   </div>
   <div class="section fp-auto-height-responsive" id="section6">
-    <button id = "rememberBtn" onclick = "buttonclicked()" class="btn btn-light" style="font-size: 30px; border-radius: 12px; background-color: #fbf8f3; border: 2px solid #555">REMEMBER THEIR NAMES</button>
+    <button id = "rememberBtn" onclick = "buttonclicked()" class="btn btn-light">REMEMBER THEIR NAMES</button>
     <br>
     <br>
     <div class="row px-5">
@@ -209,7 +215,13 @@
   </div>
   <div class="section">
     <div class="row px-5">
-      <h1>
+      <h1 style="color: #333333">
+        WE MUST COLLECTIVELY WORK AND CALL ON OUR ELECTED OFFICIALS TO TACKLE THE SYSTEMIC RACISM IN OUR POLICE SYSTEM.
+        NO MORE BLACK INDIVIDUALS NEED TO DIE AT THE HANDS OF POLICE BRUTALITY. BLACK LIVES MATTER.
+      </h1>
+      <br>
+      <br>
+      <h1 style="color: #333333">
         CS171 Final Project by Sara Komaiha, Felicia Roman, and Iman Alshawk
       </h1>
     </div>
@@ -242,7 +254,7 @@
     sectionsColor: ['#fbf8f3', '#fbf8f3', '#fbf8f3','#fbf8f3', '#fbf8f3', '#fbf8f3', '#fbf8f3', '#fbf8f3'],
     anchors: ['home', 'features', 'works', 'facts', 'cities', 'plans', 'names', 'about'],
     navigation:true,
-    navigationTooltips: ['Home', 'Month & Year', 'Demographics', 'Facts', 'Age & Race', 'Map', 'Name', 'About'],
+    navigationTooltips: ['Home', 'Vis 1', 'Vis 2', 'Vis 3', 'Vis 4', 'Vis 5', 'Vis 6', 'Takeaway'],
     showActiveTooltip: true,
     menu: '#menu'
   });

@@ -61,7 +61,7 @@ class Visualization4 {
         vis.colorScale = d3.scaleLinear()
             .range(["#f6af6a", "#683810"]);
 
-        vis.legendDim = {height: 200, width: 20, padding: 10}
+        vis.legendDim = {height: 200, width: 20, padding: 10, paddingTop: 50}
         vis.legendScale = d3.scaleLinear()
             .range([vis.legendDim.height, 0]);
         vis.legendAxis = d3.axisRight()
@@ -124,7 +124,7 @@ class Visualization4 {
         var valuesToShow = [maxProtest*.01, maxProtest*.45, maxProtest]
         var xCircle = vis.width - 10
         var xLabel = vis.width + vis.scale(maxProtest) + 20
-        var yCircle = vis.legendDim.height + vis.scale(maxProtest) + 30
+        var yCircle = vis.legendDim.height + vis.legendDim.paddingTop + vis.scale(maxProtest) + 30
         vis.legend = vis.svg
             .append("g")
             .attr("transform-origin", `${(xCircle + xLabel)/2}px ${yCircle - vis.scale(maxProtest)/2}px`)
@@ -214,12 +214,12 @@ class Visualization4 {
         vis.svg
             .append("rect")
             .attr('x', vis.width + vis.legendDim.padding)
-            .attr('y', 0)
+            .attr('y', vis.legendDim.paddingTop)
             .attr('width', vis.legendDim.width)
             .attr('height', vis.legendDim.height)
             .attr("fill", "url(#mapGradient)");
         vis.legendGroup = vis.svg.append("g")
-            .attr("transform", `translate(${vis.width + vis.legendDim.padding +vis.legendDim.width}, 0)`)
+            .attr("transform", `translate(${vis.width + vis.legendDim.padding + vis.legendDim.width}, ${vis.legendDim.paddingTop})`)
             .attr("class", "x-axis axis")
             .call(vis.legendAxis);
 

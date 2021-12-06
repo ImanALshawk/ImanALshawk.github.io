@@ -14,8 +14,10 @@ class Visualization2 {
     const formatNumber = d3.format(",.0f"), // zero decimal places
       format = function (d) {
         return formatNumber(d) + " " + units;
-      },
-      color = d3.scaleOrdinal(d3.schemeCategory10);
+      }
+      let allColors = d3.schemeCategory10;
+    allColors.push("purple","pink","yellow","black", "navy","darkgreen")
+    let color = d3.scaleOrdinal(allColors);
     console.log(document.getElementById(vis.parentElement).getBoundingClientRect());
     vis.width =
       document.getElementById(vis.parentElement).getBoundingClientRect().width -
